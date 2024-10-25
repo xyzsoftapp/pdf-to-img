@@ -95,7 +95,11 @@ export async function pdf(
   async function getPage(pageNumber: number) {
     const page = await pdfDocument.getPage(pageNumber);
 
-    const viewport = page.getViewport({ scale: options.scale ?? 1 });
+    const oViewPort = page.getViewport({ scale: 1 });
+    const scale = Number((1400 / oViewPort.width).toFixed(1)) ;
+    console.log(scale, oViewPort.width)
+    const viewport = page.getViewport({ scale });
+    //const viewport = page.getViewport({ scale: options.scale ?? 1 });
 
     const { canvas, context } = canvasFactory.create(
       viewport.width,
