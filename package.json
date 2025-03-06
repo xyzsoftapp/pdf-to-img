@@ -34,7 +34,7 @@
   "engineStrict": true,
   "dependencies": {
     "canvas": "2.11.2",
-    "pdfjs-dist": "4.2.67"
+    "pdfjs-dist": "4.10.38"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.5.1",
